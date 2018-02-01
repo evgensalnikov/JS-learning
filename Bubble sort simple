@@ -1,0 +1,22 @@
+'use strict'
+
+// bubble sort
+
+var numbers = [9, 5, 4, 7, 2, 8, 1, 6, 3, 0];
+
+ for (var j = 0; j < (numbers.length - 1); j++){
+ 	var flag = 0;
+ 		for (var i = 0; i < (numbers.length - j); i++) {
+ 			if (numbers[i+1] < numbers[i]) {
+ 				var temp =  numbers[i+1];
+ 				numbers[i+1] = numbers[i];
+ 				numbers[i] = temp;
+ 				flag = 1;
+ 				console.log( "j=" + j  );
+ 				console.log( "i=" + i );
+ 				console.log( numbers );
+ 			} else {continue}
+ 		}
+ 	if (flag == 0) {break}
+ }
+console.log ('result  ' + numbers);
